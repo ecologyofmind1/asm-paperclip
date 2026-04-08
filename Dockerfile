@@ -73,10 +73,10 @@ ENV NODE_ENV=production \
   USER_GID=${USER_GID} \
   PAPERCLIP_CONFIG=/paperclip/instances/default/config.json \
   PAPERCLIP_DEPLOYMENT_MODE=authenticated \
-  PAPERCLIP_DEPLOYMENT_EXPOSURE=private \
+  PAPERCLIP_DEPLOYMENT_EXPOSURE=public \
   OPENCODE_ALLOW_ALL_MODELS=true
 
-VOLUME ["/paperclip"]
+# VOLUME removed for Railway compatibility (use Railway volumes instead)
 EXPOSE 3100
 
 ENTRYPOINT ["docker-entrypoint.sh"]
